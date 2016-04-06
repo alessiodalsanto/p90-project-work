@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script type="text/javascript" src="angular.js"></script>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+
+    <style>
+        .eventContainer:hover {
+           background-color: lightgray;
+        }
+        .eventContainer {
+            border: 1px solid black;
+            width: 200px;
+            height: 200px;
+            overflow: auto;
+
+            padding: 3px;
+            margin: 5px;
+            float: left;
+            cursor: pointer;
+        }
+        .eventTitle {
+            margin-top: 3px;
+        }
+        #refresh {
+            clear: both;
+        }
+        .natura {
+            background-color: lawngreen;
+        }
+        .passioni {
+            background-color: hotpink;
+        }
+    </style>
+</head>
+<body ng-controller="myController">
+    <div class="eventContainer {{r.event_type}}" ng-repeat="r in ris track by $index" ng-click="goTo(r.permalink)">
+        <h3 class="eventTitle">{{r.post_title}}</h3>
+        <p>{{r.blogname}}</p>
+        <!--<p ng-bind-html="renderHtml( r.post_content )"></p>-->
+    </div>
+    <button id="refresh" type="button" ng-click="getData()">REFRESH</button>
+</body>
+</html>
