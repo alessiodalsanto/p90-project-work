@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script type="text/javascript" src="angular.js"></script>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+
+    <style>
+        body {
+            margin:3px;
+        }
+        .eventContainer:hover {
+           background-color: lightgray;
+        }
+        .eventContainer {
+            border: 1px solid black;
+            width: 250px;
+            height: 200px;
+            overflow: auto;
+
+            padding: 3px;
+            margin: 5px;
+            float: left;
+            cursor: pointer;
+
+            text-align: center;
+        }
+        .eventTitle {
+            margin-top: 3px;
+        }
+        #toolbar {
+
+        }
+        .natura {
+            background-color: rgb(125,158,34);
+        }
+        .passioni {
+            background-color: rgb(144,60,94);
+        }
+        .date {
+            text-align: center;
+            width: 100%;
+        }
+        #selectOld {
+            margin:0
+        }
+    </style>
+</head>
+<body ng-controller="myController">
+    <button id="refresh" type="button" ng-click="getData()">REFRESH</button>
+
+
+
+    <div class="eventContainer {{r.event_type}}" ng-repeat="r in ris track by $index" ng-click="goTo(r.permalink)">
+        <h1 class="date">{{r.evcal_start_date}}</h1>
+        <h3 class="eventTitle">{{r.post_title}}</h3>
+        <p>{{r.blogname}}</p>
+        <!--<p ng-bind-html="renderHtml( r.post_content )"></p>-->
+    </div>
+
+</body>
+</html>
