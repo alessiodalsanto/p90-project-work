@@ -4,11 +4,39 @@
     <meta charset="UTF-8">
     <title>:^)</title>
 
-    <script type="text/javascript" src="../bower_components/angular/angular.js"></script>
-    <script type="text/javascript" src="../bower_components/jquery/dist/jquery.js"></script>
-    <script type="text/javascript" src="script.js"></script>
+
+    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script type="text/javascript" src="CryptoJS-master/rollups/hmac-sha512.js"></script>
+    <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/components/enc-base64-min.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css" type="text/css">
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="scripts/script.js"></script>
+    <script type="text/javascript" src="scripts/app.js"></script>
+    <script type="text/javascript"
+            src="pages/homeController.js"></script>
+    <script type="text/javascript"
+            src="pages/contactController.js"></script>
+    <script type="text/javascript"
+            src="pages/detailsController.js"></script>
+    <script type="text/javascript"
+            src="pages/editController.js"></script>
+    <script type="text/javascript"
+            src="pages/insertController.js"></script>
+    <script type="text/javascript"
+            src="pages/deleteController.js"></script>
+
 </head>
-<body ng-controller="myController">
-    {{qualcosa}}
+<body ng-app="myApp">
+<div class="container">
+    <ul>
+        <li><a ui-sref="home">Home</a></li>
+        <li><a ui-sref="insert">Crea nuovo post</a></li>
+    </ul>
+
+    <div ui-view></div>
+</div>
 </body>
 </html>
