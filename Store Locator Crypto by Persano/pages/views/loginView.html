@@ -1,0 +1,32 @@
+<h1 class="fonts">Login</h1>
+<form class="form-horizontal" ng-submit="login()" ng-show="showForm">
+    <div class="form-group">
+        <div class="col-md-offset-4 col-md-4">
+
+            <br/>
+            <input type="email" class="form-control" id="txtEmail" ng-model="email" name="email" placeholder="Email">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-4 col-md-4">
+            <input type="password" class="form-control" id="txtPsw" ng-model="password" name="password" placeholder="Password">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-5 col-md-2">
+            <button type="submit" class="btn btn-default">Invia</button>
+            <br/>
+
+        </div>
+    </div>
+
+</form>
+<div class="row">
+    <div class="col-md-offset-5">
+        <img src="gears%20(1).gif" ng-show="showSpinner" style="height: 100px; width: 100px;">
+        <h3>{{message}}</h3>
+        <br/>
+    </div>
+</div>
+
+

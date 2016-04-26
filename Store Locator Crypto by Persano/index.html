@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>StoreLocator</title>
+
+
+    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script type="text/javascript" src="CryptoJS-master/rollups/hmac-sha512.js"></script>
+    <script type="text/javascript" src="scripts/eng-base-64-min.js"></script>
+
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css" type="text/css">
+    <link rel="stylesheet" href="pages/views/css/login.css">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+
+    <script type="text/javascript"
+            src="scripts/app.js"></script>
+    <script type="text/javascript"
+            src="scripts/loginManager.js"></script>
+    <script type="text/javascript"
+            src="pages/controller/loginController.js"></script>
+    <script type="text/javascript"
+            src="pages/controller/homeController.js"></script>
+    <script type="text/javascript"
+            src="pages/controller/detailsController.js"></script>
+    <script type="text/javascript"
+            src="pages/controller/mapController.js"></script>
+
+    <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNybdVb057Pp8el1lybhNhrT7uxULa08M&libraries=places"></script>
+
+    <style>
+        #map{
+            width:800px;
+            height: 800px;
+            border: 1px solid black;
+        }
+    </style>
+
+
+</head>
+<body>
+
+
+<div class="container">
+    <ul>
+        <li><a ui-sref="home">Home</a></li>
+        <li><a ui-sref="map">World Map</a> </li>
+    </ul>
+
+    <div ui-view></div>
+</div>
+</body>
+</html>

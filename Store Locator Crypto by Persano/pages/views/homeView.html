@@ -1,0 +1,21 @@
+<h1 class="fonts">Home</h1>
+
+<div>
+    {{message}}
+</div>
+
+<div class="row">
+    <div class="col-md-2 fonts">
+        <button ng-click="logout()" class="col-md-1 btn btn-default">LogOut</button>
+    </div>
+</div>
+
+<div ng-repeat="n in data track by $index">
+    <div class="row">
+        <hr class="col-md-12 style-two">
+    </div>
+        <h3 ui-sref="details({id: n.guid})" class="clickable fonts pointer">{{n.name}}</h3>
+    <p class="fonts">{{n.address}}</p>
+    <h3></h3>
+</div>
+
